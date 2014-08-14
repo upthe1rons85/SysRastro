@@ -1,0 +1,91 @@
+﻿Imports System.Data.SqlClient
+
+Public Class frmTipoAnimal
+
+    Private Sub frmTipoAnimal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Cargalst()
+        STBlblUsuario.Text = "||  Usuario Actual : " + LoginUsuario
+        MaximizeBox = False
+        txtTipoAnimal.Enabled = True
+        txtDesc.Enabled = False
+        BtnGrabar.Enabled = False
+        BtnNuevo.Enabled = True
+        btnModificar.Enabled = False
+        BtnEliminar.Enabled = False
+    End Sub
+
+    Private Sub Cargalst()
+        Dim cnnConexion = New SqlConnection()
+        Dim clsDB = New clsBD()
+        cnnConexion = clsDB.CreaConexion()
+        Dim cn As New SqlConnection
+        Dim da As New SqlDataAdapter
+        Dim ds As New DataSet
+        Dim consulta As String = "select * from [Rastro].[DBO].[engTipoAnimal](nolock)"
+        Dim cmd As New SqlCommand(consulta, cnnConexion)
+        da = New SqlDataAdapter
+        da.SelectCommand = cmd
+        da.Fill(ds, "engTipoAnimal")
+        Dim objListItem As New ListViewItem
+        Me.lstTipoAnimal.Items.Clear()
+        For Each drw As DataRow In ds.Tables("engTipoAnimal").Rows
+            objListItem = lstTipoAnimal.Items.Add(drw.Item("TipoAnimal").ToString, 0)
+            objListItem.SubItems.Add(drw.Item("Descripcion").ToString)
+            objListItem.SubItems.Add(drw.Item("Sexo").ToString)
+        Next
+    End Sub
+
+    Sub limpiar()
+        txtTipoAnimal.Clear()
+        txtDesc.Clear()
+    End Sub
+
+    Private Sub BtnGrabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGrabar.Click
+        If txtTipoAnimal.Text = "" Or txtDesc.Text = "" Then
+            MsgBox("No deben Quedar Datos Vacios..!!!", vbInformation, "Sistema Rastro")
+            txtTipoAnimal.Focus()
+            Cargalst()
+        Else
+            Try
+                Dim cnnConexion = New SqlConnection()
+                Dim clsDB = New clsBD()
+                cnnConexion = clsDB.CreaConexion()
+                Dim commandbus As New SqlCommand("spValidaTipoAnimal", cnnConexion)
+                commandbus.CommandType = CommandType.StoredProcedure
+                commandbus.Parameters.AddWithValue("@TipoAnimal", txtTipoAnimal.Text)
+                Dim n As Integer
+                n = RTrim(commandbus.ExecuteScalar())
+                If n > 0 Then
+                    Dim pclsan = New clsTipoAnimal()
+                    pclsan.ActualizaTipoAnim(txtTipoAnimal.Text, txtDesc.Text, cbxSexo.SelectedValue)
+                    MsgBox("Actualizado Correctamente", vbInformation, "Sistema Rastro")
+                    limpiar()
+                Else
+                    Dim sXML = "<xTipoAnimal>"
+                    sXML += "<TipoAnimal>" + txtTipoAnimal.Text + "</TipoAnimal>"
+                    sXML += "<Descripcion>" + txtDesc.Text + "</Descripcion>"
+                    sXML += "<Sexo>" + cbxSexo.SelectedText + "</Sexo>"
+                    sXML += "</xTipoAnimal>"
+                    Dim pclsani = New clsTipoAnimal()
+
+                    pclsani.InsertaAnim(sXML)
+                    MsgBox("Registrado Correctamente", vbInformation, "Sistema Rastro")
+                    limpiar()
+                    Cargalst()
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                MsgBox("Ocurrio un Error", vbInformation, "Sistema Rastro")
+            End Try
+            txtTipoAnimal.Enabled = True
+            txtDesc.Enabled = False
+            BtnGrabar.Enabled = False
+            BtnNuevo.Enabled = True
+            BtnEliminar.Enabled = False
+            btnModificar.Enabled = False
+            Cargalst()
+            limpiar()
+            txtTipoAnimal.Focus()
+        End If
+    End Sub
+End Class

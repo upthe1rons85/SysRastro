@@ -1,0 +1,28 @@
+﻿Imports System.Data.SqlClient
+Imports System.Data
+Imports SysRastro.clsUsuarios
+Imports SysRastro.mdVariables
+Imports SysRastro.clsTools
+Public Class frmPrincipal
+
+    Private Sub frmPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Text = Space(160) + "Desarrollo de Engordas Estabuladas S.A. de C.V." + Space(10) + VersionCont()
+        Me.Hide()
+        Login.Show()
+        Me.WindowState = 2
+    End Sub
+
+    Private Sub RolasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RolasToolStripMenuItem.Click
+        Dim isOpen As Boolean = False
+        For Each f As Form In Application.OpenForms
+            If f.Name = frmCatRolas.Name Then
+                isOpen = True
+            End If
+        Next
+        If isOpen = False Then
+            My.Forms.frmCatRolas.Show()
+        Else
+            My.Forms.frmCatRolas.Focus()
+        End If
+    End Sub
+End Class

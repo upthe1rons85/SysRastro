@@ -1,0 +1,63 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsRolas.vb" caret="2742" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmPrincipal.vb" caret="2472" fromTop="12" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="2877" fromTop="26" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmCatRolas.vb" caret="1564" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="1111" fromTop="0" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:Login.vb" caret="410" fromTop="9" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsBD.vb" caret="168" fromTop="4" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="2908" fromTop="16" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="4992" fromTop="17" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="4867" fromTop="14" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="5301" fromTop="7" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="5573" fromTop="8" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmPrincipal.vb" caret="2361" fromTop="14" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmCatRolas.vb" caret="6818" fromTop="4" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="6154" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmCatRolas.vb" caret="6818" fromTop="5" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="6545" fromTop="14" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="6796" fromTop="15" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="6565" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="7446" fromTop="18" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="7376" fromTop="17" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmPrincipal.vb" caret="2395" fromTop="8" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="466" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="1814" fromTop="9" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="2723" fromTop="13" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="3821" fromTop="10" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="1596" fromTop="10" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="1173" fromTop="3" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="1378" fromTop="8" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="2176" fromTop="14" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="499" fromTop="11" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="192" fromTop="4" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="2414" fromTop="6" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:clsTipoAnimal.vb" caret="2877" fromTop="17" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="2909" fromTop="5" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="3170" fromTop="9" />
+      <File id="A6E80B7E-4938-46D3-8AD5-4A708C330838/f:frmTipoAnimal.vb" caret="873" fromTop="7" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
